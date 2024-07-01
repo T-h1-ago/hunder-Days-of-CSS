@@ -1,0 +1,113 @@
+*{
+    margin: 0%;
+}
+
+.container{
+    width: 25rem;
+    height: 25rem;
+    border-radius: 2%;
+    margin: 10% auto;
+
+    background: linear-gradient(45deg, rgb(67,59,160), rgb(78,197,202));
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .hundred{
+        width: calc( height * 2 + calc(100px*4/10) );
+        height: 100px;
+        background-color: antiquewhite;
+        padding: 0%;
+        margin: 0%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+        /* bottom: .8rem; */
+        z-index: 1;
+    }
+        .uno{
+            /* width: calc( 100px  ); */
+            /* height: 100%; */
+            background-color: yellow;
+
+            display: flex;
+            /* position: relative; */
+            /* top: -35px; */
+            /* left: 20px; */
+        }
+            .obliqua{
+                width: 20px;
+                height: calc( 100px * 4/10);
+                background-color: #fb0;
+                margin: 0%;
+                
+                position: relative;
+                top: 0%;
+                left: -20px;
+                z-index: 20;
+
+                transform: rotate(45deg);
+                transform-origin: top left;
+            }
+            .dritta{
+                width: 20px;
+                height: 100px;
+                background-color: #fff;
+                margin: 0%;
+                
+                position: relative;
+                top: 10%;
+
+                z-index: 30;
+            }
+    .zeri{
+        width: calc( 100px * 2 );
+        height: calc( 100% );
+
+        display: flex;
+        position: relative;
+        /* left: -5px; */
+    }
+        .cerchi{
+            /* width: calc( 100% / 2 - 5% );
+            height: calc( 100% - 30% ); */
+
+            /* border: 20px solid #fff; */
+            border-radius: 50%;
+
+            position: relative;
+            /* box-shadow: 10px 5px 5px , linear-gradient(0.25turn, #3f87a6); */
+        }
+        .first-zero{
+            background-color: aquamarine;
+
+            /* left: -20px; */
+            /* margin: auto auto; */
+
+        }
+        .second-zero{
+            background-color: blueviolet;
+            /* border: 25px solid #fbf; */
+
+            /* left: -20px; */
+            /* margin: auto auto; */
+        }
+
+h2{
+    /* width: ; */
+    /* height: ; */
+
+    font-size: 500%;
+    line-height: -30%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+h3{
+    text-transform: uppercase;
+}
