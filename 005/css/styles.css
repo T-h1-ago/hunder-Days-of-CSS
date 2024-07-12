@@ -25,4 +25,34 @@ body {
     align-items: center;
     justify-content: center;
 }
+/* 
+400 * 50%= 200
+10% * 400= 20
 
+*/
+.card {
+    height: 200px;
+    width: 260px;
+    background-color: whitesmoke;
+
+    border-radius: 3px;
+
+    box-shadow: 
+    7.5px 7.5px 15px -1px rgba(0, 0, 0, 0.5), 
+    -7.5px -7.5px 15px -4px rgba(255, 255, 255, 0.3);
+}
+.card-header {
+    height: 30%;
+    width: wrap;
+    background-color: var(--coHeadeer);
+}
+    .parameter {
+        position: relative;
+        top: 5px;
+        right: 5px;
+        display: flex;
+        /* row-gap: 50px; */
+        column-gap: 10px;
+        grid-template-columns: auto auto;
+        flex-direction: row-reverse;
+    }
