@@ -1,6 +1,8 @@
-/* body {
-    background-color: red;
-} */
+:root {
+    --bezier: cubic-bezier(.21,.98,.6,.99);
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -28,23 +30,17 @@ body {
         /* background-color: bisque; */
 
         position: absolute;
-
-        /* margin: auto; */
-
     }
     .circles span {
         border-radius: 50%;
         background-color: white;
-        box-shadow: 
-        7.5px 12.5px 10px 4px 
-        rgba(0, 0, 0, 0.35), 
-        -5px -5px 20px 1px 
-        rgba(255, 255, 255, 0.25);
+        box-shadow: 3.5px 5.5px 5px 4px rgba(0, 0, 0, 0.08), -5px -5px 20px 1px rgba(255, 255, 255, 0.2);
         
-        top: 0;
-        left:0;
-        bottom: 0;
-        right:0;
+        position: absolute;
+            top: 0;
+            left:0;
+            bottom: 0;
+            right:0;
         margin: auto auto;
     }
         /* .class {
@@ -64,29 +60,48 @@ body {
         .circles .circle-external {
             height: 100%;
             width: 100%;
+            z-index: 1;
 
-            position: absolute;
-            
+            animation-name: externalExpand;
+                animation-duration: 2s;
+                animation-timing-function: var(--bezier);
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-fill-mode: both;
         }
-            .circles span:nth-child(1){
-                /* width: 00px;
-                height: 00px; */
-                background: white;
-                transition: width 2s;
+            @keyframes externalExpand {
+                0%, 10% { transform: scale(0); }
+                100% { transform: scale(1); }
             }
         .circles .circle-medium {
-            height: calc(100% * 2/3);
-            width: calc(100% * 2/3);
+            height: calc(100%*2/3);
+            width: calc(100%*2/3);
+            z-index: 2;
 
-            position: absolute;
-            
+            animation-name: mediumExpand;
+                animation-duration: 2s;
+                animation-timing-function: var(--bezier);
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-fill-mode: both;
         }
+            @keyframes mediumExpand {
+                0%, 40% { transform: scale(0); }
+                100% { transform: scale(1); }
+            }
         .circles .circle-internal {
-            height: calc(100% * 1/3);
-            width: calc(100% * 1/3);
-            
-            position: absolute;
-            /* top: calc( calc(100% - calc(100% * 1/3)) /2);
-            left: calc( calc(100% - calc(100% * 1/3)) /2); */
-        }
+            height: calc(100%*1/3);
+            width: calc(100%*1/3);
+            z-index: 3;
 
+            animation-name: internalExpand;
+                animation-duration: 2s;
+                animation-timing-function: var(--bezier);
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-fill-mode: both;
+        }
+            @keyframes internalExpand {
+                0%, 70% { transform: scale(0); }
+                100% { transform: scale(1); }
+            }
