@@ -28,6 +28,9 @@ body {
         /* background-color: bisque; */
 
         position: absolute;
+
+        /* margin: auto; */
+
     }
     .circles span {
         border-radius: 50%;
@@ -37,6 +40,12 @@ body {
         rgba(0, 0, 0, 0.35), 
         -5px -5px 20px 1px 
         rgba(255, 255, 255, 0.25);
+        
+        top: 0;
+        left:0;
+        bottom: 0;
+        right:0;
+        margin: auto auto;
     }
         /* .class {
             height: 0px;
@@ -57,13 +66,12 @@ body {
             width: 100%;
 
             position: absolute;
-            top: 0%;
-            left: 0%;
+            
         }
             .circles span:nth-child(1){
-                width: 100px;
-                height: 100px;
-                background: red;
+                /* width: 00px;
+                height: 00px; */
+                background: white;
                 transition: width 2s;
             }
         .circles .circle-medium {
@@ -71,15 +79,14 @@ body {
             width: calc(100% * 2/3);
 
             position: absolute;
-            top: calc( calc(100% - calc(100% * 2/3)) /2);
-            left: calc( calc(100% - calc(100% * 2/3)) /2);
+            
         }
         .circles .circle-internal {
             height: calc(100% * 1/3);
             width: calc(100% * 1/3);
             
             position: absolute;
-            top: calc( calc(100% - calc(100% * 1/3)) /2);
-            left: calc( calc(100% - calc(100% * 1/3)) /2);
+            /* top: calc( calc(100% - calc(100% * 1/3)) /2);
+            left: calc( calc(100% - calc(100% * 1/3)) /2); */
         }
 
