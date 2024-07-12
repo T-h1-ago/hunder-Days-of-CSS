@@ -17,7 +17,7 @@
 }
 
     .hundred{
-        width: calc( height * 2 + calc(100px*4/10) );
+        width: calc( 100px * 2 + calc(100px*1/5) );
         height: 100px;
         background-color: antiquewhite;
         padding: 0%;
@@ -25,25 +25,32 @@
 
         display: flex;
         align-items: center;
-        justify-content: center;
+        /* justify-content: center; */
 
         position: relative;
         /* bottom: .8rem; */
         z-index: 1;
     }
-        .uno{
-            /* width: calc( 100px  ); */
+        /* .uno{ */
+            /* width: 40px; */
             /* height: 100%; */
-            background-color: yellow;
+            /* background-color: yellow; */
 
-            display: flex;
+            /* display: flex; */
             /* position: relative; */
             /* top: -35px; */
             /* left: 20px; */
+        /* } */
+        .uno{
+            /* width: wrap; */
+            height: 100%;
+            background-color: #fff000;
+
+            display: flex;
         }
             .obliqua{
-                width: 20px;
-                height: calc( 100px * 4/10);
+                width: 100%;
+                height: calc( 100px * 2/10);
                 background-color: #fb0;
                 margin: 0%;
                 
@@ -56,7 +63,7 @@
                 transform-origin: top left;
             }
             .dritta{
-                width: 20px;
+                width: 30px;
                 height: 100px;
                 background-color: #fff;
                 margin: 0%;

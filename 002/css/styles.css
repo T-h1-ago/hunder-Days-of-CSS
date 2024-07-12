@@ -1,0 +1,160 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+.navbar{
+    width: auto;
+    height: calc( wrap );
+    background-color: rgb(63,175,130);
+
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+
+    padding: .8% .95%;
+    /* border: ; */
+    margin: 1.25% .4%;
+}
+
+.menu-icon{
+    height: 50px;
+    width: 50px;
+    margin-right: auto;
+    position: relative;
+    /* border-radius: 50%; */
+    
+    /* background-color: aquamarine; */
+}
+
+        /*
+        Descendant Selector 
+            The descendant selector matches all elements that are descendants of a specified element.
+        
+            The following example selects all <SPAN> elements inside ".menu-icon" elements:
+        */
+    .menu-icon span{
+        height: 5px;
+        width: 100%;
+        background-color: #fff;
+
+        border-radius: 25px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s ease;
+
+    }
+        .menu-icon span:nth-child(1){
+            top: 25%;
+        }
+        .menu-icon span:nth-child(3){
+            top: 75%;
+        }
+            .menu-icon.active span{
+                background-color: white;
+            }
+            .menu-icon.active span:nth-child(1){
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+            .menu-icon.active span:nth-child(2){
+                opacity: 0;
+            }
+            .menu-icon.active span:nth-child(3){
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+            
+    
+
+/* That help Me ↓ */
+    a {
+        color: white;
+    }
+    a:visited {
+        color: white;
+    }
+    a:hover {
+        color: #6F86ff;
+    }
+
+    body {
+        /* background-color: rgb( 65, 71, 97 ); */
+        font-family: sans-serif;
+    }
+
+    /* off-screen-menu */
+    .off-screen-menu {
+        background-color: rgb(34, 37, 49);
+        height: 100vh;
+        width: 100%;
+        max-width: 450px;
+        
+        position: fixed;
+        top: 0;
+        right: -450px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 3rem;
+
+        transition: .3s ease;
+    }
+    .off-screen-menu.active {
+        right: 0;
+    }
+
+    /*  nav  */
+    nav {
+        padding: 1rem;
+        display: flex;
+        background-color: rgb( 34, 37, 49);
+    }
+
+    /* ham menu */
+    .ham-menu {
+        height: 50px;
+        width: 50px;
+        margin-left: auto;
+        position: relative;
+    }
+    .ham-menu span {
+        height: 5px;
+        width: 100%;
+        background-color: #6f86ff;
+        border-radius: 25px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s ease;
+    }
+    .ham-menu span:nth-child(1) {
+        top: 25%;
+    }
+    .ham-menu span:nth-child(3) {
+        top: 75%;
+    }
+    .ham-menu.active span {
+        background-color: white;
+    }
+    .ham-menu.active span:nth-child(1) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .ham-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .ham-menu.active span:nth-child(3) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
