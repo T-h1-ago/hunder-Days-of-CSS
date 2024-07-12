@@ -1,3 +1,28 @@
-/* body {
-    background-color: red;
-} */
+:root{
+    --colorFrame: rgb(66,167,161);
+    --coHeadeer: rgb(241,186,100);
+    --red: #FA7373;
+    --blue: #7BA2FF;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.frame {
+    height: 400px;
+    width: 400px;
+
+    border-radius: 10px;
+    background-color: var(--colorFrame);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
